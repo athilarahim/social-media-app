@@ -1,0 +1,90 @@
+[
+    {
+        "heading":"Karen Onnabit posted an update",
+        "cmnum":"3",
+        "like":"21k",
+        "share":"50",
+        "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+        "recent": true,
+        "date":"12 june 2020",
+        "image":"images/update1.jpg"
+        
+    },
+    {
+        "heading":"Donald Canard updated his profile picture",
+        "cmnum":"3",
+        "like":"500",
+        "share":"3",
+        "description":"Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "recent": false,
+        "date":"1 june 2020",
+        "image":"images/update2.png"
+        
+    },
+    {
+        "heading":"Joe V Awl posted an update",
+        "cmnum":"5",
+        "like":"8k",
+        "share":"50",
+        "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+        "recent": true,
+        "date":"1 june 2020",
+        "image":"images/update3.jpg"
+        
+    },
+    {
+        "heading":"Michael Souaris added to her story",
+        "cmnum":"3",
+        "like":"49",
+        "share":"1",
+        "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+        "recent": false,
+        "date":"12 june 2020",
+        "image":"images/update4.jpg"
+        
+    },
+    {
+        "heading":"Karen Onnabit posted an update",
+        "cmnum":"3",
+        "like":"5k",
+        "share":"8",
+        "description":"Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "recent": true,
+        "date":"25 june 2020",
+        "image":"images/update5.jpg"
+        
+    },
+    {
+        "heading":"Melody Sunshine joined at Willington University",
+        "cmnum":"3",
+        "like":"75",
+        "share":"3",
+        "description":"Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "recent": false,
+        "date":"12 june 2020",
+        "image":"images/update8.jpg"
+        
+    },
+    {
+        "heading":"Michael J Reynard posted an update",
+        "cmnum":"3",
+        "like":"10k",
+        "share":"80",
+        "description":"Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "recent": true,
+        "date":"12 may 2020",
+        "image":"images/update6.jpg"
+        
+    },
+    {
+        "heading":"Bridjet Theriviaquai updated his cover photo",
+        "cmnum":"4",
+        "like":"280",
+        "share":"3",
+        "description":"Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "recent": false,
+        "date":"12 june 2020",
+        "image":"images/update7.jpg"
+        
+    }
+]

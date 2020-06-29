@@ -1,7 +1,13 @@
+body{
+    color: #1c324b;
+    background: #e7e7e7;
+    font-family: 'Montserrat', sans-serif;
+}
+
 .navbar{
     height: 60px;
     width:100%;
-    background-color: aquamarine;
+    background-color: #277976;
     
     
     
@@ -15,6 +21,7 @@
 }
 li{
     display: inline;
+  
 }
 .container{
     display: flex;
@@ -25,25 +32,133 @@ li{
 .left{
     flex: 1;
     height: 100%;
-    background-color: wheat;
-  
+    background-color: #bed96c;
+    overflow: auto;
+    padding: 15px;
+    margin: 15px;
 }
+.left::-webkit-scrollbar {
+    display: none;
+
+}
+
 .middle{
     flex: 2;
-    height: 100%;
+    padding: 15px;
    
 }
+.mdl{
+    display: flex;
+    flex-direction: column;
+}
+
 .right{
     flex: 1;
     height: 100%;
-    background-color: wheat;
+    background-color: #bed96c;
+    overflow: auto;
+    padding: 15px;
+    margin: 15px;
 }
+.right::-webkit-scrollbar {
+    display: none;
+
+}
+
+
 .frnd{
-    height: 5%;
+    height: 4%;
     width: 10%;
     border-radius: 50%;
     margin-top: 10px;
+    cursor: pointer;
 }
 .frn{
-    padding-left: 70px;
+    
+    color: rgb(121, 112, 112);
+    text-align: center;
+    font-size: 30px;
 }
+.like{
+    color: white;
+}
+
+
+
+.im {
+    height: auto;
+    vertical-align: middle;
+    min-width: 100%;
+   
+
+}
+
+
+ 
+  .card {
+    background-color: white;
+    border-radius: 0.25rem;
+    box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+    margin-bottom: 6px;
+    
+   
+
+  }
+  
+  .card_content {
+    padding: 1rem;
+    background-color: #277976;
+  }
+  
+  .card_title {
+    color: #ffffff;
+    font-size: 1.6rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+ 
+    margin: 0px;
+  }
+  
+  .card_text {
+    color: #ffffff;
+    font-size: 0.175rem;
+    line-height: 1.5;
+    margin-bottom: 1.25rem;    
+    font-weight: 400;
+  }
+  
+  .main{
+      flex: 1;
+      margin: 20px;
+  }
+  .lk{
+      color: white;
+      text-decoration: none;
+      margin-left:  20px;
+      cursor: pointer;
+  }
+  .icons{
+      margin-top: 5px;
+  }
+  .days{
+      margin-right: 20px;
+  }
+  .news{
+      font-size: larger;
+      color: #1c324b;
+  }
+  .trend{
+      outline-width: 1px;
+      outline-color: #1c324b;
+      outline-style: ridge;
+      margin-left: 4px;
+      margin-right: 4px;
+  }
+  .commentarea{
+      margin-top: 5px;
+  }
+  .cmt{
+      border-radius: 0.25rem;
+      
+  }

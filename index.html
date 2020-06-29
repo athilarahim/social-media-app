@@ -1,114 +1,308 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>socila-media-app</title>
     <link href="index.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet"> 
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"> </script>
+    <script type="text/javascript">
+        var middleone = document.getElementById('middleone');
+        $(document).ready(function (e) {
+            $.getJSON('index.json', function(result) {
+                $.each(result, function(i, item) {
+                    $("#middleone").append(`<div class="main">
+                <div class="card">
+                  <div class="card_image"><img class="im" style="height:84%;" src="${item.image}"></div>
+                  <div class="card_content">
+                    <h2 class="card_title">${item.heading}</h2>
+                    <h3 style="color:white;">${item.description}</h3>
+            <div class="icons">
+                    <a class="lk" href=""><i class="fa fa-thumbs-up like"></i></a>${item.like}
+                    
+                    <a class="lk" href=""><i class="fas fa-comment"></i></a>${item.cmnum}
+                    <a class="lk href="""><i class="fa fa-share-alt" ></i></a>${item.share}
+                    </div>
+                   
+                  </div>
+                </div>
+              </div> `)
+                });
+            });
+        });
+
+        var recentpost = document.getElementById('recent');
+        $(document).ready(function (e) {
+            $.getJSON('index.json', function(result) {
+                $.each(result, function(i, item) {
+                    if(item.recent==true){
+                    $("#recent").append(`   <ul style="outline-width: 1px;
+      outline-color: cadetblue;
+      outline-style: ridge;">
+                    <li>
+                        <h4 class="news">${item.heading}</h4>
+                    </li>
+                    <li>
+                        <ul style="color: rgb(8, 99, 99); cursor: pointer;">
+                            <li class="days">${item.date}</li>
+                            <li>${item.like} likes</li>
+                            
+                        </ul>
+                    </li>
+                </ul>
+                        
+
+                        `)
+                    }
+                });
+            });
+        });
+
+        
+
+
+        
+    </script>
 </head>
+
 <body>
     <!--Navbar-->
-<div class="navbar">
-<div id="profile">
-    <ul style="list-style: none;">
-    <li><img src="images/profile.webp" alt="profile" class="proimage"></li>
-    <li>Athila Rahim</li>
-    </ul>
-</div>
-</div>
-<div class="container">
-    <div class="left">
+    <div class="navbar">
+        <div id="profile">
+            <ul style="list-style: none;">
+                <li><img src="images/profile.webp" alt="profile" class="proimage"></li>
+            </ul>
+        </div>
+    </div>
+    <div class="container">
+        <div  class="left">
+            <h2 style="color: rgb(90, 26, 105); font-style: italic;">Recently viewed</h2>  
+            <div id="recent" class="trend">
+                
+            </div>
+            <h2 style="color: rgb(90, 26, 105); font-style: italic;">Trending posts</h2>
+            <div class="trend">
+               
+                <ul>
+                    <li>
+                        <h4 class="news">Facebook has reached to millions of users</h4>
+                    </li>
+                    <li>
+                        <ul style="color: rgb(8, 99, 99); cursor: pointer;">
+                            <li class="days">3h ago</li>
+                            <li>100k likes</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="trend">
+                <ul>
+                    <li>
+                        <h4 class="news">Bharat Ratna Awards</h4>
+                    </li>
+                    <li>
+                        <ul style="color: rgb(8, 99, 99); cursor: pointer;">
+                            <li class="days">2d ago</li>
+                            <li>6k likes</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="trend">
+                <ul>
+                    <li>
+                        <h4 class="news">Now Github is more user friendly </h4>
+                    </li>
+                    <li>
+                        <ul style="color: rgb(8, 99, 99); cursor: pointer;">
+                            <li class="days">2d ago</li>
+                            <li>12k likes</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="trend">
+                <ul>
+                    <li>
+                        <h4 class="news">Corona virus as world's ever biggest pandemic</h4>
+                    </li>
+                    <li>
+                        <ul style="color: rgb(8, 99, 99); cursor: pointer;">
+                            <li class="days">3d ago</li>
+                            <li>120k likes</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="trend">
+                <ul>
+                    <li>
+                        <h4 class="news">The firms hiring in India</h4>
+                    </li>
+                    <li>
+                        <ul style="color: rgb(8, 99, 99); cursor: pointer;">
+                            <li class="days">2h ago</li>
+                            <li>10k likes</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="trend">
+                <ul>
+                    <li>
+                        <h4 class="news">Google decides to pay for (some) news this year</h4>
+                    </li>
+                    <li>
+                        <ul style="color: rgb(8, 99, 99); cursor: pointer;">
+                            <li class="days">2d ago</li>
+                            <li>12k likes</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
 
+        </div>
+        <div id="middleone" class="middle mdl"></div>
+        <div class="right">
+            <div class="friends">
+                <h2 class="frn">Friends</h2>
+                <ul>
+                    <li>
+                        <ul>
+                            <li><img src="images/frnd1.png" alt="" class="frnd"></li>
+                            <li class="frnd">Melody Sunshine</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul>
+                            <li><img src="images/frnd2.jpg" alt="" class="frnd"></li>
+                            <li class="frnd">Dustin Trailblazer</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul>
+                            <li><img src="images/frnd3.png" alt="" class="frnd"></li>
+                            <li class="frnd">Donald Canard</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul>
+                            <li><img src="images/frnd5.png" alt="" class="frnd"></li>
+                            <li class="frnd">Michael J. Reynard</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul>
+                            <li><img src="images/frnd1.png" alt="" class="frnd"></li>
+                            <li class="frnd">Karen Onnabit</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul>
+                            <li><img src="images/frnd2.jpg" alt="" class="frnd"></li>
+                            <li class="frnd">Michael Souris</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul>
+                            <li><img src="images/frnd3.png" alt="" class="frnd"></li>
+                            <li class="frnd">Bridget Theriveaquai</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul>
+                            <li><img src="images/frnd5.png" alt="" class="frnd"></li>
+                            <li class="frnd">Joe V. Awl</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul>
+                            <li><img src="images/frnd5.png" alt="" class="frnd"></li>
+                            <li class="frnd">Michael J. Reynard</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul>
+                            <li><img src="images/frnd1.png" alt="" class="frnd"></li>
+                            <li class="frnd">Karen Onnabit</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul>
+                            <li><img src="images/frnd2.jpg" alt="" class="frnd"></li>
+                            <li class="frnd">Michael Souris</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul>
+                            <li><img src="images/frnd3.png" alt="" class="frnd"></li>
+                            <li class="frnd">Bridget Theriveaquai</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul>
+                            <li><img src="images/frnd5.png" alt="" class="frnd"></li>
+                            <li class="frnd">Joe V. Awl</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul>
+                            <li><img src="images/frnd3.png" alt="" class="frnd"></li>
+                            <li class="frnd">Donald Canard</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul>
+                            <li><img src="images/frnd3.png" alt="" class="frnd"></li>
+                            <li class="frnd">Donald Canard</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul>
+                            <li><img src="images/frnd5.png" alt="" class="frnd"></li>
+                            <li class="frnd">Michael J. Reynard</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul>
+                            <li><img src="images/frnd1.png" alt="" class="frnd"></li>
+                            <li class="frnd">Karen Onnabit</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul>
+                            <li><img src="images/frnd2.jpg" alt="" class="frnd"></li>
+                            <li class="frnd">Michael Souris</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul>
+                            <li><img src="images/frnd3.png" alt="" class="frnd"></li>
+                            <li class="frnd">Bridget Theriveaquai</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul>
+                            <li><img src="images/frnd5.png" alt="" class="frnd"></li>
+                            <li class="frnd">Joe V. Awl</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul>
+                            <li><img src="images/frnd5.png" alt="" class="frnd"></li>
+                            <li class="frnd">Michael J. Reynard</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </div>
-    <div class="middle">
-
-    </div>
-    <div class="right">
-    <div class="friends">
-        <h2 class="frn">Friends</h2>
-        <ul>
-            <li>
-                <ul>
-                    <li><img src="images/frnd1.png" alt="" class="frnd"></li>
-                    <li>Melody Sunshine</li>
-                </ul>
-            </li>
-            <li>
-                <ul>
-                    <li><img src="images/frnd2.jpg" alt="" class="frnd"></li>
-                    <li>Dustin Trailblazer</li>
-                </ul>
-            </li>
-            <li>
-                <ul>
-                    <li><img src="images/frnd3.png" alt="" class="frnd"></li>
-                    <li>Donald Canard</li>
-                </ul>
-            </li>
-            <li>
-                <ul>
-                    <li><img src="images/frnd5.png" alt="" class="frnd"></li>
-                    <li>Michael J. Reynard</li>
-                </ul>
-            </li>
-            <li>
-                <ul>
-                    <li><img src="images/frnd1.png" alt="" class="frnd"></li>
-                    <li>Karen Onnabit</li>
-                </ul>
-            </li>
-            <li>
-                <ul>
-                    <li><img src="images/frnd2.jpg" alt="" class="frnd"></li>
-                    <li>Michael Souris</li>
-                </ul>
-            </li>
-            <li>
-                <ul>
-                    <li><img src="images/frnd3.png" alt="" class="frnd"></li>
-                    <li>Bridget Theriveaquai</li>
-                </ul>
-            </li>
-            <li>
-                <ul>
-                    <li><img src="images/frnd5.png" alt="" class="frnd"></li>
-                    <li>Joe V. Awl</li>
-                </ul>
-            </li>
-            <li>
-                <ul>
-                    <li><img src="images/frnd5.png" alt="" class="frnd"></li>
-                    <li>Michael J. Reynard</li>
-                </ul>
-            </li>
-            <li>
-                <ul>
-                    <li><img src="images/frnd1.png" alt="" class="frnd"></li>
-                    <li>Karen Onnabit</li>
-                </ul>
-            </li>
-            <li>
-                <ul>
-                    <li><img src="images/frnd2.jpg" alt="" class="frnd"></li>
-                    <li>Michael Souris</li>
-                </ul>
-            </li>
-            <li>
-                <ul>
-                    <li><img src="images/frnd3.png" alt="" class="frnd"></li>
-                    <li>Bridget Theriveaquai</li>
-                </ul>
-            </li>
-            <li>
-                <ul>
-                    <li><img src="images/frnd5.png" alt="" class="frnd"></li>
-                    <li>Joe V. Awl</li>
-                </ul>
-            </li>
-        </ul>
-    </div>
-    </div>
-</div>
 
 
 </body>
+
 </html>
